@@ -110,9 +110,36 @@ export interface ReplyElement {
   originalMsgState: any | null // 原消息状态，可以根据实际情况调整类型
 }
 
+export interface FaceElement {
+  faceIndex: number
+  faceText: string
+  faceType: number
+  packId: string
+  stickerId: string
+  sourceType: number
+  stickerType: number
+  resultId: string
+  surpriseId: string
+  randomType: number
+  imageType: null
+  pokeType: null
+  spokeSummary: null
+  doubleHit: null
+  vaspokeId: null
+  vaspokeName: null
+  vaspokeMinver: null
+  pokeStrength: null
+  msgType: null
+  faceBubbleCount: null
+  oldVersionStr: null
+  pokeFlag: null
+  chainCount: number
+}
+
 export enum ElementType {
   TextElement = 1,
   PicElement = 2,
+  FaceElement = 6,
   ReplyElement = 7
 }
 
@@ -122,7 +149,7 @@ export interface Element {
   elementGroupId: number
   extBufForUI: Uint8Array
   textElement: null | TextElement
-  faceElement: null
+  faceElement: null | FaceElement
   marketFaceElement: null
   replyElement: null | ReplyElement
   picElement: null | PicElement
@@ -153,7 +180,10 @@ export interface Element {
 }
 
 // 1私聊，2群聊
-export type ChatType = 1 | 2
+export enum ChatType {
+  Private = 1,
+  Group = 2
+}
 
 export interface PeerInfo {
   chatType: ChatType

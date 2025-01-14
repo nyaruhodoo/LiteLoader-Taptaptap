@@ -1,1 +1,1 @@
-"use strict";const e=require("electron"),t="liteloader-wrapper-template",n={configUpdate(r){e.ipcRenderer.send(`${t}:update`,r)}};e.contextBridge.exposeInMainWorld(t,n);
+"use strict";const e=require("electron"),t="liteLoader-taptaptap",o={configUpdate(n){e.ipcRenderer.send(`${t}:update`,n)}};e.contextBridge.exposeInMainWorld(t,o);

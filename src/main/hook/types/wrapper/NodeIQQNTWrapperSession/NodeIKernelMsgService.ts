@@ -1,5 +1,76 @@
 import type { Element, ChatType, PeerInfo } from './Element'
 
+interface RoleInfo {
+  roleId: string
+  name: string
+  color: number
+}
+
+interface Message {
+  msgId: string
+  msgRandom: string
+  msgSeq: string
+  cntSeq: string
+  chatType: number
+  msgType: number
+  subMsgType: number
+  sendType: number
+  senderUid: string
+  peerUid: string
+  channelId: string
+  guildId: string
+  guildCode: string
+  fromUid: string
+  fromAppid: string
+  msgTime: string
+  msgMeta: Record<string, unknown>
+  sendStatus: number
+  sendRemarkName: string
+  sendMemberName: string
+  sendNickName: string
+  guildName: string
+  channelName: string
+  elements: Element[]
+  records: []
+  emojiLikesList: []
+  commentCnt: string
+  directMsgFlag: number
+  directMsgMembers: []
+  peerName: string
+  freqLimitInfo: null
+  editable: boolean
+  avatarMeta: string
+  avatarPendant: string
+  feedId: string
+  roleId: string
+  timeStamp: string
+  clientIdentityInfo: null
+  isImportMsg: boolean
+  atType: number
+  roleType: number
+  fromChannelRoleInfo: RoleInfo
+  fromGuildRoleInfo: RoleInfo
+  levelRoleInfo: RoleInfo
+  recallTime: string
+  isOnlineMsg: boolean
+  generalFlags: Record<string, unknown>
+  clientSeq: string
+  fileGroupSize: null
+  foldingInfo: null
+  multiTransInfo: null
+  senderUin: string
+  peerUin: string
+  msgAttrs: Record<string, unknown>
+  anonymousExtInfo: null
+  nameType: number
+  avatarFlag: number
+  extInfoForUI: null
+  personalMedal: null
+  categoryManage: number
+  msgEventInfo: null
+  sourceType: number
+}
+
 /**
  * 消息事件监听器接口，用于处理消息相关的各种事件。
  */
@@ -7,7 +78,7 @@ interface KernelMsgListener {
   /**
    * 接收到消息时触发
    */
-  onRecvMsg: () => void
+  onRecvMsg: (msgList: Message[]) => void
 
   /**
    * 接收到文件消息时触发
@@ -730,7 +801,7 @@ export interface NodeIKernelMsgService {
   }> // 获取最近表情列表
   setMsgEmojiLikes(
     peerInfo: PeerInfo,
-    msgId: string,
+    msgSeq: string,
     emojiId: string,
     emojiCount: string,
     isLiked: boolean

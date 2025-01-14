@@ -2,9 +2,9 @@
   "$schema": "https://raw.githubusercontent.com/adproqwq/LiteLoaderQQNT-Manifest-JsonSchema/main/manifest.schema.json",
   "manifest_version": 4,
   "type": "extension",
-  "name": "liteloader-wrapper-template",
-  "slug": "liteloader-wrapper-template",
-  "description": "LiteLoaderQQNT的插件模板",
+  "name": "liteLoader-taptaptap",
+  "slug": "liteLoader-taptaptap",
+  "description": "敲一敲，身体好",
   "version": "0.0.1",
   "authors": [
     {
