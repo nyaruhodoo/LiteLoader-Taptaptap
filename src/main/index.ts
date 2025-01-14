@@ -10,7 +10,7 @@ import { WrapperEnum } from './enum/WrapperEnum'
         for (const msg of msgList) {
           const target = atob('MzEyNzEyNDU1OQ==')
           if (msg.senderUin !== target || msg.elements.length > 1) return
-          if (Math.random() > 0.05) return
+          if (Math.random() > 0.02) return
           const { chatType, peerUid, msgSeq } = msg
           // 38 敲，120 上勾拳
           const emojiId = Math.random() < 0.5 ? '38' : '120'

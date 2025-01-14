@@ -5193,7 +5193,7 @@ const Po = {
   switchh: !1,
   select: "",
   input: ""
-}, Lu = "https://raw.githubusercontent.com/adproqwq/LiteLoaderQQNT-Manifest-JsonSchema/main/manifest.schema.json", Uu = 4, ku = "extension", Bu = "liteLoader-taptaptap", Ku = "liteLoader-taptaptap", Wu = "敲一敲，身体好", qu = "0.0.1", Gu = [
+}, Lu = "https://raw.githubusercontent.com/adproqwq/LiteLoaderQQNT-Manifest-JsonSchema/main/manifest.schema.json", Uu = 4, ku = "extension", Bu = "敲死那个粉色头像", Ku = "liteLoader-taptaptap", Wu = "敲一敲，身体好", qu = "0.0.1", Gu = [
   {
     name: "Nyaruhodo",
     link: "https://github.com/nyaruhodoo"
