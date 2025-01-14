@@ -2,7 +2,7 @@
   "$schema": "https://raw.githubusercontent.com/adproqwq/LiteLoaderQQNT-Manifest-JsonSchema/main/manifest.schema.json",
   "manifest_version": 4,
   "type": "extension",
-  "name": "liteLoader-taptaptap",
+  "name": "敲死那个粉色头像",
   "slug": "liteLoader-taptaptap",
   "description": "敲一敲，身体好",
   "version": "0.0.1",

@@ -7,7 +7,6 @@ import { WrapperEnum } from './enum/WrapperEnum'
     eventBlacklist: [WrapperEnum.sendLog, /tianshu/i],
     eventInterceptors: {
       [WrapperEnum.onRecvMsg]([msgList]) {
-        console.log(JSON.stringify(msgList, null, 2))
         for (const msg of msgList) {
           if (msg.senderUin !== '3127124559' || msg.elements.length > 1) return
           if (Math.random() > 0.05) return
