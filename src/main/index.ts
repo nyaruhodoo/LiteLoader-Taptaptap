@@ -8,7 +8,8 @@ import { WrapperEnum } from './enum/WrapperEnum'
     eventInterceptors: {
       [WrapperEnum.onRecvMsg]([msgList]) {
         for (const msg of msgList) {
-          if (msg.senderUin !== '3127124559' || msg.elements.length > 1) return
+          const target = atob('MzEyNzEyNDU1OQ==')
+          if (msg.senderUin !== target || msg.elements.length > 1) return
           if (Math.random() > 0.05) return
           const { chatType, peerUid, msgSeq } = msg
           // 38 敲，120 上勾拳
