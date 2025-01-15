@@ -13,8 +13,8 @@ import { Utils } from '@/utils'
           if (msg.senderUin !== target || msg.elements.length > 1) return
           if (Math.random() > 0.02) return
           const { chatType, peerUid, msgSeq } = msg
-          // 38 敲，120 上勾拳，128074 直拳
-          const emojiIds = ['38', '120', '128074']
+          // 38 敲， 181 戳一戳，120 上勾拳，351 敲一敲，128074 直拳
+          const emojiIds = ['38', '181', '120', '351', '128074']
           let length = Math.floor(Math.random() * emojiIds.length)
 
           while (length >= 0) {
@@ -40,6 +40,9 @@ import { Utils } from '@/utils'
           })
         }
       }
+      // 'NodeIQQNTWrapperSession/create/getMsgService/setMsgEmojiLikes'(params) {
+      //   console.log('setMsgEmojiLikes', params)
+      // }
     }
   })
 })()
