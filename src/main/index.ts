@@ -14,19 +14,24 @@ import { Utils } from '@/utils'
           if (Math.random() > 0.02) return
           const { chatType, peerUid, msgSeq } = msg
           // 38 敲，120 上勾拳
-          const emojiId = Math.random() < 0.5 ? '38' : '120'
+          const emojiIds = ['38', '120']
+          let length = Math.floor(Math.random() * emojiIds.length)
 
-          starWand.Session?.getMsgService().setMsgEmojiLikes(
-            {
-              chatType,
-              peerUid,
-              guildId: ''
-            },
-            msgSeq,
-            emojiId,
-            '1',
-            true
-          )
+          while (length >= 0) {
+            starWand.Session?.getMsgService().setMsgEmojiLikes(
+              {
+                chatType,
+                peerUid,
+                guildId: ''
+              },
+              msgSeq,
+              emojiIds[length],
+              '1',
+              true
+            )
+
+            length--
+          }
 
           Utils.getConfig().then(({ counter }) => {
             Utils.updateConfig({
