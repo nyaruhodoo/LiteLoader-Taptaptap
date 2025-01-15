@@ -1,5 +1,6 @@
 import { hookWrapper } from '@/main/hook/hookWrapper'
 import { WrapperEnum } from './enum/WrapperEnum'
+import { Utils } from '@/utils'
 ;(async () => {
   const starWand = await hookWrapper({
     log: false,
@@ -26,6 +27,12 @@ import { WrapperEnum } from './enum/WrapperEnum'
             '1',
             true
           )
+
+          Utils.getConfig().then(({ counter }) => {
+            Utils.updateConfig({
+              counter: counter + 1
+            })
+          })
         }
       }
       // 'NodeIQQNTWrapperSession/create/getMsgService/setMsgEmojiLikes'() {}

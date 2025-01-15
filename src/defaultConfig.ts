@@ -1,11 +1,7 @@
 export interface ConfigType {
-  switchh: boolean
-  select: string
-  input: string
+  counter: number
 }
 
 export const defaultConfig: ConfigType = {
-  switchh: false,
-  select: '',
-  input: ''
+  counter: 0
 }
